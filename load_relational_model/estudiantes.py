@@ -1,7 +1,6 @@
 import csv
 from datetime import datetime
-from dbConnection import conexion
-from loadBD import logger
+from loadBD import logger, conexion
 
 
 def load_data():

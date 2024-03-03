@@ -1,10 +1,10 @@
 import csv
 from datetime import datetime
 import os
-from loadBD import logger
+from loadBD import logger, conexion
 
 
-def load_data(conexion):
+def load_data():
     try:
         logger.info("Starting job data loading process")
 

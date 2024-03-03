@@ -1,3 +1,4 @@
+import dbConnection
 import logging
 import bapi
 import estudiantes
@@ -21,6 +22,11 @@ console_handler.setFormatter(formatter)
 
 # Add the console handler to the logger
 logger.addHandler(console_handler)
+
+conexion = dbConnection.createConexion()
+if conexion is None:
+    logger.error("No se pudo conectar a la base de datos MySQL")
+    exit(1)
 
 programas.load_data()
 estudiantes.load_data()

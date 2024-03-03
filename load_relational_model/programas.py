@@ -1,10 +1,9 @@
 import csv
 import os
-from dbConnection import conexion
-from loadBD import logger
+from loadBD import logger, conexion
 
 
-def load_data(conexion):
+def load_data():
     try:
         logger.info("Load programas data started")
 
