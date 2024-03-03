@@ -36,6 +36,7 @@ CREATE TABLE trabajo(
     fechaFin DATE,
     compañia VARCHAR(50),
     pais VARCHAR(50),
+    sector VARCHAR(50),
     salario INT
 );
 
