@@ -1,4 +1,4 @@
--- CREATE DATABASE proyecto;
+ CREATE DATABASE proyecto;
 
 USE proyecto;
 
@@ -8,7 +8,7 @@ CREATE TABLE estudiante(
     nombre VARCHAR(50) NOT NULL,
     genero ENUM("MALE", "FEMALE", "OTHER", "I PREFFER NOT SAY"),
     email VARCHAR(50),
-    telefono INT,
+    telefono BIGINT,
     FechaNacimiento DATE
 );
 
@@ -37,12 +37,14 @@ CREATE TABLE programa_estudiante(
 -- DROP TABLE trabajo;
 CREATE TABLE trabajo(
 	idTrabajo INT PRIMARY KEY,
+	idEstudiante INT,
     fechaInicio DATE,
     fechaFin DATE,
-    compañia VARCHAR(50),
+    compania VARCHAR(50),
     pais VARCHAR(50),
     sector VARCHAR(50),
-    salario INT
+    salario INT,
+    FOREIGN KEY (idEstudiante) REFERENCES estudiante(idEstudiante)
 );
 
 -- DROP TABLE tesis;
