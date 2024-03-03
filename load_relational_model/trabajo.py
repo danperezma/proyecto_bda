@@ -1,7 +1,8 @@
 import csv
 from datetime import datetime
 import os
-from loadBD import logger, conexion
+from dbConnection import conexion
+from logger import logger
 
 
 def load_data():
@@ -10,7 +11,6 @@ def load_data():
 
         # Verificar si la conexión fue exitosa
         if conexion.is_connected():
-            logger.info("Conexión exitosa a la base de datos MySQL")
             # Crear cursor
             cursor = conexion.cursor()
 
@@ -35,7 +35,6 @@ def load_data():
 
             # Cerrar cursor y conexión
             cursor.close()
-            conexion.close()
         else:
             logger.error("No se pudo conectar a la base de datos MySQL")
     except Exception as e:

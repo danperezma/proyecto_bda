@@ -1,12 +1,11 @@
-import csv
-from datetime import datetime
-from loadBD import logger, conexion
 import os
-import logging
+import csv
+from dbConnection import conexion
+from logger import logger
 
 
 def load_data():
-    logging.info("Loading BAPI data started")
+    logger.info("Loading BAPI data started")
     try:
         # Verificar si la conexión fue exitosa
         if conexion.is_connected():
@@ -31,12 +30,11 @@ def load_data():
 
             # Confirmar la transacción
             conexion.commit()
-            logging.info("Datos insertados correctamente.")
+            logger.info("Datos insertados correctamente.")
 
             # Cerrar cursor y conexión
             cursor.close()
-            conexion.close()
         else:
-            logging.error("No se pudo conectar a la base de datos MySQL")
+            logger.error("No se pudo conectar a la base de datos MySQL")
     except Exception as e:
-        logging.error(f"Error during data loading: {e}")
+        logger.error(f"Error during data loading: {e}")

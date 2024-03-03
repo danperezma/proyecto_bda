@@ -1,5 +1,3 @@
-import dbConnection
-import logging
 import bapi
 import estudiantes
 import programas
@@ -7,31 +5,39 @@ import programas_estudiante
 import pasantia
 import tesis
 import trabajo
+from dbConnection import conexion
 
-# Create a logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+clear = False
 
-# Create a console handler and set its level to INFO
-console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)
 
-# Create a formatter and add it to the console handler
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
+if not clear:
+    programas.load_data()
+    estudiantes.load_data()
+    programas_estudiante.load_data()
+    pasantia.load_data()
+    tesis.load_data()
+    trabajo.load_data()
+    bapi.load_data()
 
-# Add the console handler to the logger
-logger.addHandler(console_handler)
+else:
+    def delete_all_data():
+        try:
+            cursor = conexion.cursor()
 
-conexion = dbConnection.createConexion()
-if conexion is None:
-    logger.error("No se pudo conectar a la base de datos MySQL")
-    exit(1)
+            # List of tables from which you want to delete data
+            tables = ["bapi", "estudiante", "pasantia", "programa",
+                      "programa_estudiante", "tesis", "trabajo"]
 
-programas.load_data()
-estudiantes.load_data()
-programas_estudiante.load_data()
-pasantia.load_data()
-tesis.load_data()
-trabajo.load_data()
-bapi.load_data()
+            for table in tables:
+                delete_query = f"DELETE FROM {table}"
+                cursor.execute(delete_query)
+                print(f"All data deleted from table {table}")
+
+            conexion.commit()
+            print("All data deleted successfully.")
+        except Exception as e:
+            print(f"Error during data deletion: {e}")
+        finally:
+            cursor.close()
+
+    delete_all_data()

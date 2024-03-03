@@ -1,12 +1,9 @@
-import mysql.connector
 import os
-import logging
+import mysql.connector
 from dotenv import load_dotenv
+from logger import logger
 
 load_dotenv()
-
-# Configure logging
-logging.basicConfig(filename='app.log', level=logging.INFO)
 
 
 def createConexion():
@@ -23,10 +20,13 @@ def createConexion():
             database=db_database
         )
 
-        logging.info("Connected to the database")
+        logger.info("Connected to the database")
         return conexion
 
     except mysql.connector.Error as err:
         # Log connection error
-        logging.error(f"Failed to connect to the database: {err}")
+        logger.error(f"Failed to connect to the database: {err}")
         return None
+
+
+conexion = createConexion()
