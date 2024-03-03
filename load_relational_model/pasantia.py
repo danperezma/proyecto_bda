@@ -5,7 +5,7 @@ import os
 from loadBD import logger
 
 
-def load_data(conexion):
+def load_data():
     try:
         logger.info("Load PASANTIA data started")
 
