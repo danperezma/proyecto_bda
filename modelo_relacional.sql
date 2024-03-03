@@ -24,7 +24,8 @@ CREATE TABLE programa_estudiante(
     idPrograma INT,
     fechaInicio DATE,
     fechaFin DATE,
-    modalidadGrado ENUM("TESIS", "BAPI", "PASANTIA"),
+    modalidadGrado ENUM("tesis", "bapi", "pasantia"),
+    nivel ENUM("pregrado", "maestria", "doctorado"),
 	PRIMARY KEY(idPrograma, idEstudiante),
     FOREIGN KEY (idEstudiante) REFERENCES estudiante(idEstudiante),
     FOREIGN KEY (idPrograma) REFERENCES programa(idPrograma)
