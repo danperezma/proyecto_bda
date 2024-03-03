@@ -1,0 +1,81 @@
+idPrograma,nombre,nivel,departamento,facultad,sede
+1,administracion de Empresas,Pregrado,administracion de Empresas,Facultad de Ciencias Economicas,Bogota
+2,antropologia,Pregrado,antropologia,Facultad de Ciencias Sociales y Humanas,Bogota
+3,arquitectura,Pregrado,arquitectura,Facultad de arquitectura y Diseno,Bogota
+4,arte,Pregrado,arte,Facultad de artes y Humanidades,Bogota
+5,Biologia,Pregrado,Biologia,Facultad de Ciencias Naturales y Matematicas,Bogota
+6,Ciencias ambientales,Pregrado,Ciencias ambientales,Facultad de Ciencias Naturales y Matematicas,Bogota
+7,Ciencias de la Computacion,Pregrado,Ciencias de la Computacion,Facultad de Ciencias Naturales y Matematicas,Bogota
+8,Ciencias Politicas,Pregrado,Ciencias Politicas,Facultad de Ciencias Sociales y Humanas,Bogota
+9,Comunicacion Social,Pregrado,Comunicacion Social,Facultad de Ciencias Sociales y Humanas,Bogota
+10,Contaduria Publica,Pregrado,Contaduria Publica,Facultad de Ciencias Economicas,Bogota
+11,Derecho,Pregrado,Derecho,Facultad de Derecho,Bogota
+12,Diseno Grafico,Pregrado,Diseno Grafico,Facultad de artes y Humanidades,Bogota
+13,Economia,Pregrado,Economia,Facultad de Ciencias Economicas,Bogota
+14,Educacion,Pregrado,Educacion,Facultad de Ciencias de la Educacion,Bogota
+15,Enfermeria,Pregrado,Enfermeria,Facultad de Ciencias de la Salud,Bogota
+16,Fisica,Pregrado,Fisica,Facultad de Ciencias Naturales y Matematicas,Bogota
+17,Geografia,Pregrado,Geografia,Facultad de Ciencias Sociales y Humanas,Bogota
+18,Historia,Pregrado,Historia,Facultad de Ciencias Sociales y Humanas,Bogota
+19,Ingenieria agricola,Pregrado,Ingenieria agricola,Facultad de Ingenieria agronomica,Bogota
+20,Ingenieria ambiental,Pregrado,Ingenieria ambiental,Facultad de Ingenieria Civil y ambiental,Bogota
+21,Ingenieria Biomedica,Pregrado,Ingenieria Biomedica,Facultad de Ingenieria Biomedica,Bogota
+22,Ingenieria Civil,Pregrado,Ingenieria Civil,Facultad de Ingenieria Civil y ambiental,Bogota
+23,Ingenieria de alimentos,Pregrado,Ingenieria de alimentos,Facultad de Ingenieria de alimentos,Bogota
+24,Ingenieria de Minas,Pregrado,Ingenieria de Minas,Facultad de Ingenieria de Minas,Bogota
+25,Ingenieria de Sistemas y Computacion,Pregrado,Ingenieria de Sistemas y Computacion,Facultad de Ingenieria y Ciencias Basicas,Bogota
+26,Ingenieria Electrica,Pregrado,Ingenieria Electrica,Facultad de Ingenieria Electrica y Electronica,Bogota
+27,Ingenieria Industrial,Pregrado,Ingenieria Industrial,Facultad de Ingenieria Industrial,Bogota
+28,Ingenieria Mecanica,Pregrado,Ingenieria Mecanica,Facultad de Ingenieria Mecanica,Bogota
+29,Ingenieria Quimica,Pregrado,Ingenieria Quimica,Facultad de Ingenieria Quimica,Bogota
+30,Lenguas Modernas,Pregrado,Lenguas Modernas,Facultad de Ciencias Humanas y de la Educacion,Bogota
+31,Matematicas,Pregrado,Matematicas,Facultad de Ciencias Naturales y Matematicas,Bogota
+32,Medicina,Pregrado,Medicina,Facultad de Ciencias de la Salud,Bogota
+33,Microbiologia,Pregrado,Microbiologia,Facultad de Ciencias Naturales y Matematicas,Bogota
+34,Musica,Pregrado,Musica,Facultad de artes y Humanidades,Bogota
+35,Nutricion y Dietetica,Pregrado,Nutricion y Dietetica,Facultad de Ciencias de la Salud,Bogota
+36,Odontologia,Pregrado,Odontologia,Facultad de Odontologia,Bogota
+37,Pedagogia,Pregrado,Pedagogia,Facultad de Ciencias de la Educacion,Bogota
+38,Psicologia,Pregrado,Psicologia,Facultad de Ciencias Sociales y Humanas,Bogota
+39,Quimica,Pregrado,Quimica,Facultad de Ciencias Naturales y Matematicas,Bogota
+40,Sociologia,Pregrado,Sociologia,Facultad de Ciencias Sociales y Humanas,Bogota
+41,Trabajo Social,Pregrado,Trabajo Social,Facultad de Ciencias Sociales y Humanas,Bogota
+42,arquitectura Paisajista (Maestria),Maestria,arquitectura,Facultad de arquitectura y Diseno,Bogota
+43,Biologia Molecular y Biotecnologia (Maestria),Maestria,Biologia,Facultad de Ciencias Naturales y Matematicas,Bogota
+44,Ciencias de la Informacion y la Comunicacion (Maestria),Maestria,Ciencias de la Informacion y la Comunicacion,Facultad de Ciencias Sociales y Humanas,Bogota
+45,Desarrollo Sostenible (Maestria),Maestria,Desarrollo Sostenible,Facultad de Ciencias Economicas,Bogota
+46,Economia (Maestria),Maestria,Economia,Facultad de Ciencias Economicas,Bogota
+47,Educacion (Maestria),Maestria,Educacion,Facultad de Ciencias de la Educacion,Bogota
+48,Estudios Latinoamericanos (Maestria),Maestria,Estudios Latinoamericanos,Facultad de Ciencias Sociales y Humanas,Bogota
+49,Fisica (Maestria),Maestria,Fisica,Facultad de Ciencias Naturales y Matematicas,Bogota
+50,Genetica y Biologia Molecular (Maestria),Maestria,Genetica y Biologia Molecular,Facultad de Ciencias Naturales y Matematicas,Bogota
+51,Gestion y Desarrollo Urbanos (Maestria),Maestria,Gestion y Desarrollo Urbanos,Facultad de arquitectura y Diseno,Bogota
+52,Historia (Maestria),Maestria,Historia,Facultad de Ciencias Sociales y Humanas,Bogota
+53,Ingenieria Biomedica (Maestria),Maestria,Ingenieria Biomedica,Facultad de Ingenieria Biomedica,Bogota
+54,Ingenieria Civil y ambiental (Maestria),Maestria,Ingenieria Civil y ambiental,Facultad de Ingenieria Civil y ambiental,Bogota
+55,Ingenieria de Materiales (Maestria),Maestria,Ingenieria de Materiales,Facultad de Ingenieria y Ciencias Basicas,Bogota
+56,Ingenieria de Sistemas y Computacion (Maestria),Maestria,Ingenieria de Sistemas y Computacion,Facultad de Ingenieria y Ciencias Basicas,Bogota
+57,Linguistica (Maestria),Maestria,Linguistica,Facultad de Ciencias Humanas y de la Educacion,Bogota
+58,Matematicas (Maestria),Maestria,Matematicas,Facultad de Ciencias Naturales y Matematicas,Bogota
+59,Musica (Maestria),Maestria,Musica,Facultad de artes y Humanidades,Bogota
+60,Neurociencias (Maestria),Maestria,Neurociencias,Facultad de Ciencias de la Salud,Bogota
+61,Odontologia (Maestria),Maestria,Odontologia,Facultad de Odontologia,Bogota
+62,Planificacion Urbana y Regional (Maestria),Maestria,Planificacion Urbana y Regional,Facultad de arquitectura y Diseno,Bogota
+63,Quimica (Maestria),Maestria,Quimica,Facultad de Ciencias Naturales y Matematicas,Bogota
+64,Salud Publica (Maestria),Maestria,Salud Publica,Facultad de Ciencias de la Salud,Bogota
+65,Sociologia (Maestria),Maestria,Sociologia,Facultad de Ciencias Sociales y Humanas,Bogota
+66,Trabajo Social (Maestria),Maestria,Trabajo Social,Facultad de Ciencias Sociales y Humanas,Bogota
+67,arquitectura (Doctorado),Doctorado,arquitectura,Facultad de arquitectura y Diseno,Bogota
+68,Biologia (Doctorado),Doctorado,Biologia,Facultad de Ciencias Naturales y Matematicas,Bogota
+69,Ciencias de la Informacion y la Comunicacion (Doctorado),Doctorado,Ciencias de la Informacion y la Comunicacion,Facultad de Ciencias Sociales y Humanas,Bogota
+70,Derecho (Doctorado),Doctorado,Derecho,Facultad de Derecho,Bogota
+71,Educacion (Doctorado),Doctorado,Educacion,Facultad de Ciencias de la Educacion,Bogota
+72,Estudios Urbanos y Regionales (Doctorado),Doctorado,Estudios Urbanos y Regionales,Facultad de Ciencias Sociales y Humanas,Bogota
+73,Fisica (Doctorado),Doctorado,Fisica,Facultad de Ciencias Naturales y Matematicas,Bogota
+74,Ingenieria Civil (Doctorado),Doctorado,Ingenieria Civil,Facultad de Ingenieria Civil y ambiental,Bogota
+75,Linguistica (Doctorado),Doctorado,Linguistica,Facultad de Ciencias Humanas y de la Educacion,Bogota
+76,Matematicas (Doctorado),Doctorado,Matematicas,Facultad de Ciencias Naturales y Matematicas,Bogota
+77,Medicina (Doctorado),Doctorado,Medicina,Facultad de Ciencias de la Salud,Bogota
+78,Neurociencias (Doctorado),Doctorado,Neurociencias,Facultad de Ciencias de la Salud,Bogota
+79,Quimica (Doctorado),Doctorado,Quimica,Facultad de Ciencias Naturales y Matematicas,Bogota
+80,Sociologia (Doctorado),Doctorado,Sociologia,Facultad de Ciencias Sociales y Humanas,Bogota

@@ -1,0 +1,349 @@
+idEstudiante,idPrograma,nombreSupervisor,empresa,duracionContrato
+8,7,Irv O'Dogherty,Armstrong Group,6
+9,45,Clayton Scudder,"Grady, Boyer and Pfannerstill",5
+10,34,Barclay Dronsfield,"Boyle, Wilderman and Gleason",4
+11,44,Bellanca Lympenie,"Goodwin, Smith and Kuphal",4
+14,68,Beverie Towe,"Koelpin, O'Reilly and Goodwin",6
+15,32,Josefa Pirson,"Kuvalis, Goldner and Rosenbaum",6
+23,37,Thorpe Yakuntsov,Feeney-Bayer,4
+25,12,Heinrik Guiton,"Effertz, Bartell and Walker",5
+30,11,Isa Bernat,Stanton Inc,5
+34,52,Venita Achromov,Rath Group,5
+35,61,Lorilyn Westhoff,Hickle-Wilkinson,4
+40,37,Gianna Sugar,"Sauer, Wilderman and Blick",4
+41,9,Kirbee Tack,Aufderhar and Sons,4
+43,77,Averil Daglish,Parisian Inc,6
+46,20,Orlando Lowing,Jenkins-Morissette,4
+50,28,Nady Litton,Armstrong-Olson,5
+55,76,Flori Champkin,Harvey Group,5
+56,54,Ellswerth Peregrine,Abernathy Inc,5
+57,68,Sandi Garritley,Grady Group,5
+67,63,Angelita Jolliman,"Considine, Lemke and Quitzon",5
+71,13,Mahmoud Barlie,Pollich-Hoppe,5
+73,9,Oralee Wimbush,Klein-Marks,5
+78,48,Marylin Bedle,Dibbert Group,5
+82,79,Flor Abramamovh,White and Sons,5
+91,60,Mellisent MacArthur,Glover-Mayert,6
+94,51,Bevan Bravery,Mohr and Sons,4
+95,63,Trix Waterfall,Stehr and Sons,5
+96,66,Moll Hupka,"Bergnaum, Kassulke and Larkin",4
+101,75,Kelsy McKeevers,Legros-Borer,4
+102,72,Brew Quinevan,Lockman-Hamill,4
+104,38,Base Tallach,"Roberts, Mohr and Goodwin",4
+108,40,Merlina Bezemer,O'Hara Group,5
+113,35,Sylvia Rojahn,"Conn, McKenzie and Wolf",5
+114,80,Joline Jude,Mitchell-Bahringer,5
+116,1,Jedediah Bengal,"Hackett, Homenick and Emmerich",6
+126,36,Boniface Melendez,Luettgen Inc,5
+129,6,Sheelah Tregiddo,Kessler LLC,4
+131,11,Elisha Weyman,"Durgan, Leannon and Mayer",4
+134,58,Arv Norway,Kovacek and Sons,4
+138,46,Jaquelin Pieterick,Predovic LLC,5
+139,76,Prue O'Driscole,Breitenberg Group,4
+140,78,Liuka Zmitrichenko,"Schmeler, Cruickshank and Considine",4
+144,5,Delmar Strettle,Dooley Inc,4
+145,5,Tiphany Le Fevre,"Jaskolski, Wilderman and Haag",4
+146,66,Sacha Potter,"Becker, Morissette and Beatty",6
+147,60,Barb Shirtliff,Gerlach and Sons,5
+148,36,Lydon Hazelhurst,Padberg-Brown,6
+150,44,Yovonnda Trouncer,Huel Group,5
+157,34,Simona Sigward,Gottlieb-O'Connell,4
+158,66,Lindi Thompstone,Kshlerin LLC,6
+160,37,Annalee Manwaring,O'Connell LLC,6
+162,43,Laurianne Farrey,"Jaskolski, Lockman and Reichert",6
+166,78,Ellynn Stuckes,Harvey-Olson,4
+169,76,Nancee Vizor,"Toy, Schaden and Klein",4
+172,51,Debor Willoughway,Graham Group,5
+177,80,Shaughn Trimnell,Kshlerin-Harvey,5
+178,11,Claretta Lakeman,O'Kon Inc,4
+179,56,Powell Morecombe,"Frami, Greenholt and Goodwin",4
+181,2,Lorie Strowthers,"Gorczany, Kohler and Tillman",5
+182,68,Ealasaid Darbyshire,Brown LLC,4
+185,55,Jolie Grahlman,Leannon-Farrell,6
+188,27,Cosette Punchard,"Douglas, Hintz and Treutel",5
+190,48,Herb Simonich,"Parker, Wilkinson and Kuhn",5
+192,19,Pamelina Guidelli,Auer-Champlin,4
+194,33,Arthur Barfford,Rippin Group,5
+195,74,Michaella Gibke,"Greenfelder, Mitchell and Gulgowski",6
+197,32,Bord MacKessock,Gutkowski and Sons,5
+199,78,Beverie Wyer,Balistreri Group,6
+201,44,Brad Pregel,"Bayer, Kuhn and Windler",5
+202,51,Caro Stranger,Hettinger-Boyle,4
+204,50,Shawna Evins,Wiza-Abshire,6
+211,22,Gifford Klimentov,Jast-Wintheiser,6
+214,74,Sheba Wickie,Hauck-Rippin,4
+215,23,Kamilah Bloyes,Kirlin-Windler,6
+216,39,Stesha Warlton,"Hansen, Stehr and Spencer",6
+231,56,Pattie Maxsted,"Haley, Crona and Hudson",4
+234,45,Agosto O'Mahoney,Hayes-Ferry,5
+238,32,Hali Spawton,Haag Inc,6
+239,12,Mab Morcomb,Kuhlman-Emmerich,6
+244,37,Joeann Molian,Koss-Lehner,4
+249,42,Cathe Allcroft,"Kohler, Wolf and Emmerich",4
+250,40,Kenn Palethorpe,"Schoen, Lind and Hand",4
+254,14,Margarette Peepall,Price-Ullrich,4
+256,20,Tommi Penright,"Frami, Schneider and Reichert",4
+258,23,Laurie Cliffe,"Lynch, McCullough and Reinger",4
+261,33,Tamar Durrant,Gerhold-Herzog,4
+266,43,Gillan MacGinley,"Powlowski, Howell and Ullrich",6
+270,71,Serene Pilcher,Nitzsche Group,5
+276,12,Damian Gawthrope,Ritchie LLC,6
+277,70,Biddy Tommeo,Cole Inc,5
+281,37,Giuseppe Marklund,Collins and Sons,4
+283,32,Clair Phare,Cummerata-Dare,6
+284,32,Nomi Bulch,Harris-Boyle,5
+292,63,Kacy Kevis,Cartwright LLC,5
+293,80,Graham Pancost,Reynolds LLC,4
+294,39,Arnuad Sandey,Russel and Sons,4
+297,20,Aileen Pywell,"Kassulke, Ziemann and Ebert",6
+302,9,Shaun Fishley,Cartwright-Reilly,6
+306,9,Hilton Toffano,Koss and Sons,4
+307,12,Kendell De Angelo,Kreiger LLC,5
+308,58,Patsy Pabelik,Ullrich LLC,6
+310,45,Law Thomel,"Howe, Kris and Berge",6
+312,30,Stephani Tregea,"Williamson, Schiller and Lebsack",4
+317,25,Terri-jo Fenners,"Friesen, Moen and Balistreri",6
+320,42,Martica Gianni,"Dooley, Rowe and Reichel",6
+326,36,Basilius Brister,"Boyer, Moen and Haag",4
+329,43,Antonietta Benedit,Collins-Gutmann,5
+333,32,Laurel Armin,"Little, Kuhn and Kunde",6
+334,4,Amata Blanshard,Ullrich-Streich,5
+338,17,Arleta Battell,Gutmann-Koch,5
+339,41,Morten Husthwaite,"Quigley, Kuphal and Kerluke",6
+341,32,Gunar Jagiello,Hilll-Rau,5
+342,36,Bobina Kadwallider,Prohaska Group,5
+343,49,Baldwin Mattholie,"Schulist, Kertzmann and Daniel",4
+344,13,Reed McAuley,"Hudson, Kovacek and Kovacek",5
+345,4,Della Nussii,"Zieme, Hammes and Buckridge",6
+346,52,Mendy Grayshan,Ortiz-Pollich,5
+350,74,Wanids Jeandot,Ernser-Hahn,6
+354,8,Lotty Savaage,"Funk, Franecki and Volkman",6
+357,61,Harlen Wetton,Gerlach-Strosin,6
+360,43,Stacy Markson,Ward-Jenkins,6
+362,34,Shepard Goulbourn,Osinski and Sons,5
+363,20,Andromache Wadhams,"Murazik, Torp and Waelchi",4
+364,5,Morgan Gaskin,Mohr Group,5
+366,80,Greg Soot,"Kuvalis, Murazik and Cronin",6
+367,57,Lamont Rhodef,Aufderhar-Pollich,4
+370,50,Mel Weddeburn - Scrimgeour,"Hammes, Effertz and Keeling",5
+376,61,Penrod Trood,Bartoletti Inc,5
+380,39,Fleming Ruckhard,"Koch, Torphy and Heidenreich",4
+381,76,Iolande Nelthrop,Torphy LLC,5
+386,39,Lusa Capsey,Romaguera Group,6
+388,67,Nichol Sager,"McGlynn, Morar and Haag",4
+389,47,Livvie Tutin,Simonis and Sons,4
+392,76,Judi Orr,"Dach, Orn and Bosco",5
+394,27,Garret Saleway,"Crooks, Stroman and Sawayn",6
+395,2,Cassandry Rathke,Bernhard-Kuvalis,4
+397,37,Tedie Ogelsby,"Jones, Breitenberg and Lynch",5
+402,10,Gearalt Bruhnsen,Bashirian-Quitzon,5
+403,20,Eloise Steventon,Hackett and Sons,5
+405,28,Kore Burree,"Ankunding, Treutel and Schroeder",6
+411,41,Nessie Reucastle,"Graham, Nikolaus and Moore",4
+412,41,Aleksandr Bench,Bednar and Sons,4
+415,20,Bartholomeo Myerscough,Romaguera Group,4
+420,4,Trent Lamp,Konopelski-Cremin,4
+421,4,Clarisse Hollerin,"Yundt, Abbott and Kerluke",4
+422,38,Caryl Berringer,"Glover, O'Conner and Keebler",4
+423,7,Jayme Calbaithe,Price-Douglas,4
+428,76,Chrissy Calverd,"Mertz, Ankunding and O'Conner",4
+431,69,Adorne Arbuckle,"Denesik, Goodwin and Hayes",5
+432,40,Winna Gratland,Schumm and Sons,5
+439,13,Humfrey Allibon,Leuschke and Sons,5
+440,43,Batholomew Hallgate,"Hettinger, Hauck and Emmerich",4
+443,49,Hyacinthia Itzkovwitch,"Hackett, Torp and Bednar",6
+449,52,Hatty Shiel,Huels-Wilkinson,6
+451,50,June MacShirie,"Kovacek, Ernser and McKenzie",6
+452,6,Roxanne Jaegar,Pacocha LLC,4
+455,63,Robbi Sellstrom,Gusikowski LLC,4
+463,62,Doe Yarnall,Lynch Inc,5
+464,27,Kurtis Geertje,Cummings Inc,5
+470,61,Gustaf Sever,"Shields, Schmitt and Wilkinson",6
+472,2,Suzi Thames,Wuckert LLC,4
+474,48,Kim Scoterbosh,Pfeffer-Reynolds,5
+475,35,Monti Puddin,Douglas and Sons,4
+480,28,Vinita Kingdon,Ankunding Group,5
+481,7,Jaymie Prescot,"Fritsch, Morissette and Batz",5
+484,65,Carlynn Sondland,Kshlerin Inc,6
+491,25,Dyann Matussow,Hane-Beer,5
+495,41,Roxi McCrachen,Fadel and Sons,6
+496,60,Oswald Bitcheno,Parisian-Koch,5
+501,71,Freddi Simes,Upton LLC,4
+504,42,Vivien Vinker,"McLaughlin, Bayer and Oberbrunner",5
+508,18,Barnaby Devine,Stehr Group,6
+512,66,Kaja Brogiotti,Bruen-Bahringer,4
+515,79,Theresina Wyke,"Hills, Renner and Runolfsdottir",4
+517,39,Jermaine Sawdon,Romaguera LLC,6
+519,64,Kamillah Readwing,"O'Conner, Blanda and Medhurst",5
+523,72,Muffin Bolus,"Boehm, Braun and Hessel",5
+527,22,Flory Burras,Jast-Labadie,4
+529,11,Benita Everington,"Stoltenberg, Dooley and Kilback",6
+534,10,Glenine Ronci,"Schinner, Dare and Haley",4
+539,42,Ram Takos,Carroll-Heathcote,4
+542,29,Daryle Grimsdell,Strosin Group,4
+554,16,Alvy Earp,Lakin-Fisher,5
+555,78,Leonard Theaker,Feeney and Sons,4
+559,12,Zebadiah Broschke,"Reynolds, Swift and Ratke",6
+560,74,Marabel Simoes,"Marks, Batz and Lueilwitz",4
+563,68,Torrey Pickerin,Kerluke LLC,5
+568,56,Mylo Slipper,Jast LLC,5
+571,55,Issi Ommanney,Bins LLC,5
+572,28,Zenia McKeowon,Rolfson-Hermann,5
+573,2,Gay Penylton,"Orn, Bruen and Kub",5
+575,34,Lenci Ormonde,Jenkins Inc,5
+577,4,Abagail Yurikov,Sporer-Lakin,4
+579,15,Leif Stokell,"Ebert, Leannon and Greenfelder",6
+580,39,Lucienne Litchmore,White and Sons,5
+581,13,My Granham,Breitenberg and Sons,6
+584,15,Madelon Yurocjhin,Schowalter Group,4
+585,4,Norrie Brockton,Predovic-Halvorson,6
+596,56,Torin McParland,Jast and Sons,5
+600,17,Rennie Crownshaw,Flatley Inc,4
+603,37,Timothee Mantram,Schinner-Hudson,6
+611,33,Violetta Cromly,Kuvalis-Halvorson,5
+613,5,Garrott Konerding,Ryan Inc,4
+616,4,Esmeralda Cathery,"Legros, Hamill and Miller",6
+618,61,Basile Shergold,Champlin and Sons,4
+619,12,Conni Ruppeli,Konopelski-Simonis,6
+625,25,Benoite Basketter,Blanda Group,5
+628,80,Kerk Roma,VonRueden Group,5
+629,23,Errol Naisbet,"Sauer, Green and Jones",5
+637,27,Barde Glashby,Christiansen-Balistreri,5
+638,5,Mahmoud Lillford,Cartwright-Smith,6
+642,40,Coralyn Dotterill,"Tromp, Mosciski and Dach",5
+643,30,Prent Verne,Towne LLC,4
+645,23,Layne Claussen,Hackett Group,4
+648,18,Hyman Bartholomieu,Heller LLC,4
+653,67,Franny Harvatt,Ritchie-Donnelly,4
+654,80,Hugh Jauncey,"Bashirian, Corwin and Ortiz",4
+655,52,Corey Askew,"Metz, Ward and Runolfsson",4
+660,15,Natala Spafford,Simonis-Fahey,5
+663,49,Tressa Jindracek,"Schultz, Konopelski and Weber",6
+672,33,Berk Ficken,Crona-Thiel,4
+674,41,Xylina Clyburn,"Wiza, Fahey and Pfannerstill",6
+675,80,Dunc Taillant,Skiles Group,6
+676,63,Winslow Sangra,Fay LLC,4
+680,44,Katusha Pebworth,Wilderman Inc,5
+681,10,Natasha Phillip,Grady-Breitenberg,5
+683,69,Miner Feavyour,"Roob, Emard and Zieme",5
+684,45,Sheba Thrustle,"Hackett, McGlynn and Armstrong",5
+686,70,Appolonia Idney,Trantow-Schinner,5
+687,21,Carlotta Luety,Oberbrunner Group,4
+689,25,Margaux Shafto,"King, Schultz and Keeling",6
+691,34,Ashlee Dewar,Hammes Group,6
+701,68,Gleda Coxhell,Dach Group,4
+705,30,Graehme Feldmann,Jerde-Armstrong,5
+706,18,Valli Paik,"Franecki, Haley and Marvin",5
+707,47,Saunder Bohlsen,Kilback Inc,5
+710,74,Marijo Clouter,Von-Greenholt,4
+712,67,Rose Neljes,"Macejkovic, Wisoky and Heller",6
+713,52,Ellen Saunder,Bailey-Smitham,4
+717,26,Whitney Syratt,"Blick, Beahan and Hintz",4
+718,59,Georgiana Beazleigh,Block-Kozey,4
+719,24,Hephzibah Brodie,Glover Inc,4
+722,69,Hagan Iglesias,Jacobi-Kassulke,5
+723,72,Tamma Farfull,"Conn, Harber and Ullrich",6
+724,35,Remus Winser,Nicolas LLC,4
+725,20,Regina Chazier,Jerde-Padberg,6
+729,39,Raven Senecaut,"Corkery, West and Shields",6
+731,32,Lanny McKeaney,"Reilly, Torp and Marvin",5
+732,48,Collete Claybourne,Rempel Inc,6
+734,25,Lanae Eeles,Feest-Reinger,4
+735,69,Ofelia Gerretsen,"Rodriguez, Mann and Bechtelar",6
+736,17,Larina Origan,"Moore, Doyle and Reichert",4
+738,58,Oliviero Andryushin,"Koch, Abbott and Schaefer",4
+739,59,Arabele Lowton,Waters-Daniel,5
+741,21,Harland Kamien,"Weimann, Braun and Effertz",4
+742,42,Jaine Dentith,"Heller, Bailey and Blanda",4
+743,63,Chickie Pettyfar,Rowe Inc,6
+749,62,Cristal Cann,Wiza-Wiegand,5
+751,40,Valina Eskell,McClure-Romaguera,4
+752,46,Reube Czyz,"Dietrich, Rice and Hane",5
+754,61,Addie Koppeck,"Erdman, Cassin and Swaniawski",5
+755,6,Nick Beton,"Rempel, Wehner and Balistreri",4
+756,15,Miguel Hammond,"Roberts, Weimann and O'Keefe",5
+757,24,Germaine Nanni,Smitham LLC,6
+761,54,Kelvin Coke,Bergnaum-Ullrich,6
+762,74,Billi Bluschke,Keebler Inc,5
+765,13,Giana Sibun,Daugherty and Sons,5
+766,22,Ashbey Picker,Zulauf Group,5
+769,62,Rosita Fibbings,Padberg-Pollich,6
+773,8,Sara de Najera,Kovacek-Bernier,5
+775,79,Tiebold Smithe,Cummings Inc,5
+778,34,Rosa Craisford,"Ullrich, Roob and Beer",6
+780,22,Kearney De Filippi,"Macejkovic, Kub and Blick",6
+781,53,Nicoline Nund,Tremblay and Sons,4
+788,26,Velma Edmundson,Schuppe Inc,6
+790,53,Thaddus Vynall,"Stroman, Kertzmann and Howe",6
+791,62,Rickie Ivashinnikov,Bailey Inc,5
+792,68,Tammi Baskeyfied,Abbott and Sons,6
+804,47,Analiese Dufaire,"Stamm, Predovic and Jakubowski",4
+810,37,Shawna Dumelow,Weissnat-O'Reilly,5
+815,22,Finley Moore,Hettinger LLC,5
+816,74,Alberta Raysdale,Hudson-Blick,5
+817,1,Chalmers Eykelhof,Schaden Inc,4
+819,24,Gottfried Euston,Purdy LLC,4
+828,48,Lemuel Dundendale,D'Amore-Spinka,5
+834,74,Verna Oldknowe,"Weissnat, Olson and Schmitt",6
+835,9,Nichols Ivanishchev,Heidenreich LLC,5
+836,61,Travus Vellacott,Sauer-O'Kon,4
+837,78,Rachel Rapper,Stoltenberg Inc,6
+842,22,Persis Siemianowicz,Weimann Group,5
+843,2,Freeland Volcker,Jacobson-Rolfson,6
+844,17,Cobbie Renol,Roberts Inc,5
+849,3,Law Warwicker,Spencer-Luettgen,5
+853,3,Valeda Renowden,Ratke LLC,5
+856,70,Elwin Gerin,"Fisher, Barrows and MacGyver",4
+858,26,Tore Ings,Jaskolski-Wintheiser,5
+859,44,Dyane Antcliff,Ondricka and Sons,6
+861,3,Yank Leeds,Herman LLC,4
+864,64,Susie Achromov,"Tremblay, Armstrong and Hyatt",5
+865,4,Vitoria Kennedy,McGlynn-Fahey,4
+867,44,Mufinella Bligh,"Maggio, Wolff and Walter",6
+868,26,Koralle Milverton,Gusikowski Inc,5
+871,25,Pennie McInnes,Leuschke Group,6
+875,20,Danita Bosma,Macejkovic-Turner,4
+876,48,Randy Packington,Klein Inc,5
+879,20,Saw Barham,Kling Group,4
+880,15,Binny Castelletti,"Feest, Durgan and Schoen",6
+883,30,Humfrey Greedy,Borer Group,5
+891,15,Welbie Carder,"Becker, Medhurst and Mertz",4
+893,74,Vittoria Cuncliffe,Bergnaum-Kerluke,5
+895,6,Courtenay Nornable,Corkery Group,5
+896,25,Hiram Alves,Wisozk Group,5
+897,12,Robenia Gayton,Howell Group,5
+898,16,Jeanelle Chapier,Ziemann-Ebert,4
+899,15,Myrtle Gannicott,"Tillman, Nolan and Torp",4
+900,2,Fred Aland,West-Buckridge,5
+902,74,Christin Longega,"Beahan, Gutmann and Rodriguez",5
+904,16,Rancell Kissock,Beier-Rohan,5
+910,2,Brady Bointon,Wolf Group,4
+917,58,Ninnette Crombleholme,Larkin-Hammes,4
+928,68,Burnard Luckin,Gutkowski and Sons,6
+935,35,Xymenes Cole,Schamberger-Jacobs,4
+941,38,Cayla Water,McCullough Inc,5
+947,14,Anton Wabe,Feil Inc,6
+950,42,Yetta Doudny,"Quitzon, Russel and Auer",6
+952,39,Caesar Creyke,"Bartoletti, Stamm and Green",5
+955,10,Vassily Londing,Bechtelar Group,4
+958,11,Devon Kyndred,"Runolfsdottir, Kunde and Huels",5
+959,12,Harley Gottschalk,"Dibbert, Schmitt and Hartmann",6
+963,6,Opaline Renzo,"Armstrong, Walsh and Wiegand",4
+965,59,Alison Puddin,VonRueden-Langworth,5
+968,38,Lita Alejandro,Ankunding LLC,6
+969,77,Petronia Tangye,"Hammes, Ullrich and Thompson",6
+971,12,Jilli Haggas,"Kertzmann, Dietrich and Mante",5
+972,12,Jeth McNeachtain,"Beer, O'Connell and Wolf",6
+974,53,Randolf Malimoe,"Torphy, Kautzer and Reynolds",4
+975,57,Dulcy Kassel,Reilly-Lynch,6
+976,9,Anderson Bault,O'Hara Inc,6
+982,20,Cassie Dillinger,Lemke LLC,5
+984,10,Gustavo Crissil,Weissnat LLC,6
+985,67,Lexis McEwen,Tromp-Durgan,4
+986,68,Suellen Bulman,Dicki-Fay,5
+987,21,Ibby Lambotin,White-Lowe,6
+988,61,Isaiah Le Page,"Moen, Rath and Batz",6
+989,67,Eberto Ivins,Waters-Terry,6
+996,43,Janice Burnsell,"Harber, Reilly and Parisian",5
+997,15,Anthony Adair,Nader LLC,5
+999,45,Marita Ballach,"Simonis, Emard and Ziemann",4
