@@ -1,36 +1,11 @@
+import datetime
 from logger import logger
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
-def months_difference(start_date, end_date):
-    start_year = start_date.year
-    start_month = start_date.month
-    end_year = end_date.year
-    end_month = end_date.month
-
-    # Calculate the difference in months
-    months = (end_year - start_year) * 12 + (end_month - start_month)
-
-    return months
-
-
-def years_difference(start_date, end_date):
-    start_year = start_date.year
-    start_month = start_date.month
-    end_year = end_date.year
-    end_month = end_date.month
-
-    # Calculate the difference in months
-    total_months = (end_year - start_year) * 12 + (end_month - start_month)
-
-    # Calculate the difference in years
-    years = total_months // 12
-
-    return years
-
-
 def process_data_and_save():
     try:
+        logger.info("Processing GRADO_FACT")
         cursor = conexion.cursor()
 
         select_query = "SELECT idEstudiante, idPrograma, fechaInicio, fechaFin, modalidadGrado FROM programa_estudiante"
@@ -49,13 +24,16 @@ def process_data_and_save():
 
             estudiante_data = cursor.fetchone()
 
+            today_date = datetime.now().year
+
             estudiante = {
                 "idEstudiante": estudiante_data[0],
                 "nombre": estudiante_data[1],
                 "sexo": estudiante_data[2],
                 "correo": estudiante_data[3],
                 "telefono": estudiante_data[4],
-                "fechaNacimiento": estudiante_data[5]
+                "fechaNacimiento": estudiante_data[5],
+                "edad": today_date - estudiante_data[5].year
             }
 
             insertIfNotExists(conexion, "ESTUDIANTE_DIM",
@@ -85,8 +63,8 @@ def process_data_and_save():
                 "fechaInicio": fechaInicio,
                 "fechaFin": fechaFin,
                 "duracionDias": (fechaFin - fechaInicio).days,
-                "duracionMeses": months_difference(fechaFin, fechaInicio),
-                "duracionAnios": years_difference(fechaFin, fechaInicio)
+                "duracionMeses": fechaFin.month - fechaInicio.month,
+                "duracionAnios": fechaFin.year - fechaInicio.year
             }
 
             tiempo_id = insertData(conexion, "TIEMPO_DIM", tiempo)
@@ -106,6 +84,7 @@ def process_data_and_save():
             insertData(conexion, "GRADO_FACT", fact)
 
         conexion.commit()
+        logger.info("Data processing finished")
     except Exception as error:
         logger.error(f"Error during data processing: {error}, {fact}")
     finally:

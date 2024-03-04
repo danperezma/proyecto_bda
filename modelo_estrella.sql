@@ -26,7 +26,8 @@ CREATE TABLE ESTUDIANTE_DIM(
   sexo VARCHAR(50),
   correo VARCHAR(50),
   telefono VARCHAR(20),
-  fechaNacimiento DATE
+  fechaNacimiento DATE,
+  edad INT
 );
 
 CREATE TABLE PROGRAMA_DIM(

@@ -3,7 +3,7 @@ import logging
 
 def setup_logger():
     # Create a logger
-    logger = logging.getLogger("my_logger")
+    logger = logging.getLogger("ETL - log")
     logger.setLevel(logging.DEBUG)
 
     # Create a handler for logging to stdout
@@ -12,7 +12,7 @@ def setup_logger():
 
     # Create a formatter
     formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        ' %(levelname)s - %(filename)s:%(lineno)d - %(message)s')
 
     # Set the formatter for the handler
     stdout_handler.setFormatter(formatter)
