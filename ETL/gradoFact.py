@@ -3,6 +3,10 @@ from logger import logger
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
+def months_difference(start_date, end_date):
+    return (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+
+
 def process_data_and_save():
     try:
         logger.info("Processing GRADO_FACT")
@@ -63,8 +67,8 @@ def process_data_and_save():
                 "fechaInicio": fechaInicio,
                 "fechaFin": fechaFin,
                 "duracionDias": (fechaFin - fechaInicio).days,
-                "duracionMeses": (fechaFin - fechaInicio).month,
-                "duracionAnios": (fechaFin - fechaInicio).year
+                "duracionMeses": months_difference(fechaFin, fechaInicio),
+                "duracionAnios": fechaFin.year - fechaInicio.year
             }
 
             tiempo_id = insertData(conexion, "TIEMPO_DIM", tiempo)

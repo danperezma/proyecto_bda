@@ -3,6 +3,10 @@ from logger import logger
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
+def months_difference(start_date, end_date):
+    return (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+
+
 def createProgramData(idPrograma, cursor):
     cursor.execute(
         f"SELECT * FROM programa WHERE idPrograma = {idPrograma}")
@@ -45,7 +49,7 @@ def createTimeData(fechaInicio, fechaFin):
         "fechaInicio": fechaInicio,
         "fechaFin": fechaFin,
         "duracionDias": (fechaFin - fechaInicio).days,
-        "duracionMeses": (fechaFin - fechaInicio).month,
+        "duracionMeses": months_difference(fechaFin - fechaInicio),
         "duracionAnios": (fechaFin - fechaInicio).year
     }
     return tiempo
