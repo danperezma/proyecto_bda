@@ -67,7 +67,7 @@ def process_data_and_save():
                 "fechaInicio": fechaInicio,
                 "fechaFin": fechaFin,
                 "duracionDias": (fechaFin - fechaInicio).days,
-                "duracionMeses": months_difference(fechaFin, fechaInicio),
+                "duracionMeses": abs(months_difference(fechaFin, fechaInicio)),
                 "duracionAnios": fechaFin.year - fechaInicio.year
             }
 
