@@ -45,8 +45,8 @@ def createTimeData(fechaInicio, fechaFin):
         "fechaInicio": fechaInicio,
         "fechaFin": fechaFin,
         "duracionDias": (fechaFin - fechaInicio).days,
-        "duracionMeses": fechaFin.month - fechaInicio.month,
-        "duracionAnios": fechaFin.year - fechaInicio.year
+        "duracionMeses": (fechaFin - fechaInicio).month,
+        "duracionAnios": (fechaFin - fechaInicio).year
     }
     return tiempo
 
