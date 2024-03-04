@@ -63,8 +63,8 @@ def process_data_and_save():
                 "fechaInicio": fechaInicio,
                 "fechaFin": fechaFin,
                 "duracionDias": (fechaFin - fechaInicio).days,
-                "duracionMeses": fechaFin.month - fechaInicio.month,
-                "duracionAnios": fechaFin.year - fechaInicio.year
+                "duracionMeses": (fechaFin - fechaInicio).month,
+                "duracionAnios": (fechaFin - fechaInicio).year
             }
 
             tiempo_id = insertData(conexion, "TIEMPO_DIM", tiempo)
