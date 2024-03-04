@@ -13,7 +13,7 @@ def load_data():
             cursor = conexion.cursor()
 
             # Nombre del archivo CSV
-            archivo_csv = os.path.join("..", "bapi.csv")
+            archivo_csv = os.path.join("../data/", "bapi.csv")
 
             # Consulta para insertar datos en la tabla
             consulta = "INSERT INTO bapi (idEstudiante, idPrograma) VALUES (%s, %s)"

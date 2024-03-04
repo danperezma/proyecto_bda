@@ -14,7 +14,7 @@ def load_data():
             cursor = conexion.cursor()
 
             # Nombre del archivo CSV
-            archivo_csv = "../data_nuevo.csv"
+            archivo_csv = "../data/data_nuevo.csv"
 
             # Consulta para insertar datos en la tabla
             consulta = "INSERT INTO programa_estudiante (idEstudiante, idPrograma, fechaInicio, fechaFin, modalidadGrado) VALUES (%s, %s, %s, %s, %s)"

@@ -13,7 +13,7 @@ def load_data():
             # C rear cursor
             cursor = conexion.cursor()
             # Nombre del archivo CSV
-            archivo_csv = os.path.join("..", "programas.csv")
+            archivo_csv = os.path.join("../data/", "programas.csv")
 
             # Consulta para insertar datos en la tabla
             consulta = "INSERT INTO programa (idPrograma, nombre, nivel, departamento, facultad, sede) VALUES (%s, %s, %s, %s, %s, %s)"
