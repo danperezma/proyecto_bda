@@ -1,8 +1,14 @@
- CREATE DATABASE proyecto;
+-- CREATE DATABASE proyecto;
 
 USE proyecto;
+DROP TABLE IF EXISTS bapi;
+DROP TABLE IF EXISTS pasantia;
+DROP TABLE IF EXISTS tesis;
+DROP TABLE IF EXISTS trabajo;
+DROP TABLE IF EXISTS programa_estudiante;
+DROP TABLE IF EXISTS programa;
+DROP TABLE IF EXISTS estudiante;
 
--- DROP TABLE estudiante;
 CREATE TABLE estudiante(
 	idEstudiante INT PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -12,7 +18,6 @@ CREATE TABLE estudiante(
     FechaNacimiento DATE
 );
 
--- DROP TABLE programa;
 CREATE TABLE programa(
 	idPrograma INT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -22,7 +27,6 @@ CREATE TABLE programa(
     sede VARCHAR(100) NOT NULL
 );
 
--- DROP TABLE programa_estudiante;
 CREATE TABLE programa_estudiante(
 	idEstudiante INT,
     idPrograma INT,
@@ -34,7 +38,6 @@ CREATE TABLE programa_estudiante(
     FOREIGN KEY (idPrograma) REFERENCES programa(idPrograma)
 );
 
--- DROP TABLE trabajo;
 CREATE TABLE trabajo(
 	idTrabajo INT PRIMARY KEY,
 	idEstudiante INT,
@@ -47,7 +50,6 @@ CREATE TABLE trabajo(
     FOREIGN KEY (idEstudiante) REFERENCES estudiante(idEstudiante)
 );
 
--- DROP TABLE tesis;
 CREATE TABLE tesis(
 	idEstudiante INT,
     idPrograma INT,
@@ -60,7 +62,6 @@ CREATE TABLE tesis(
     FOREIGN KEY (idPrograma) REFERENCES programa(idPrograma)
 );
 
--- DROP TABLE pasantia;
 CREATE TABLE pasantia(
 	idEstudiante INT,
     idPrograma INT,
@@ -72,7 +73,6 @@ CREATE TABLE pasantia(
     FOREIGN KEY (idPrograma) REFERENCES programa(idPrograma)
 );
 
--- DROP TABLE bapi;
 CREATE TABLE bapi(
 	idEstudiante INT,
     idPrograma INT,

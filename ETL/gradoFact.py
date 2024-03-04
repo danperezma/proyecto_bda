@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from logger import logger
 from dbUtils import conexion, insertIfNotExists, insertData
 
