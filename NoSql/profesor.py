@@ -21,7 +21,7 @@ def generar_datos_profesor():
     profesor = {
         "nombre": fake.name(),
         "email": fake.email(),
-        "fechaNacimiento": fake.date_of_birth(minimum_age=25, maximum_age=65),
+        "fechaNacimiento": fake.date_of_birth(minimum_age=25, maximum_age=65).strftime('%Y-%m-%d'),
         "género": random.choice(["masculino", "femenino", "prefiere no decir"]),
         "númeroTeléfono": fake.phone_number(),
         "estrato": random.randint(1, 6),
@@ -34,17 +34,17 @@ def generar_datos_profesor():
 
 # Insertar datos de ejemplo en la base de datos
 def insertar_datos_profesor(coleccion, num_docs):
-    # coleccion.delete_many({})
     datos = []
     for _ in range(num_docs):
         datos.append(generar_datos_profesor())
     print(datos)
-    # coleccion.insert_many(datos)
+    coleccion.insert_many(datos)
 
 if __name__ == "__main__":
     # Inicializar cliente de MongoDB
     cliente = MongoClient(os.getenv('MONGODB_URI'))
     db = cliente['testdb']
     coleccion_profesor = db['profesor']
+    coleccion_profesor.delete_many({})
     insertar_datos_profesor(coleccion_profesor, 5)
     # print("Datos de profesores insertados correctamente en la base de datos MongoDB.")

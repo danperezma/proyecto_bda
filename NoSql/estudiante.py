@@ -11,18 +11,18 @@ load_dotenv()
 fake = Faker()
 
 def insertar_publicacion(publicacion):
-    # cliente = MongoClient('localhost', 27017)
-    # db = cliente['testdb']
-    # coleccion_publicacion = db['publicacion']
-    # coleccion_publicacion.insert_one(publicacion)
-    print(publicacion)
+    cliente = MongoClient(os.getenv('MONGODB_URI'))
+    db = cliente['testdb']
+    coleccion_publicacion = db['publicacion']
+    coleccion_publicacion.insert_one(publicacion)
+    # print(publicacion)
 
 # Generar datos para estudiantes
 def generar_datos_estudiante():
     estudiante = {
         "nombre": fake.name(),
         "email": fake.email(),
-        "fechaNacimiento": fake.date_of_birth(minimum_age=18, maximum_age=25),
+        "fechaNacimiento": fake.date_of_birth(minimum_age=18, maximum_age=25).strftime('%Y-%m-%d'),
         "género": random.choice(["masculino", "femenino", "prefiere no decir"]),
         "númeroTeléfono": fake.phone_number(),
         "estrato": random.randint(1, 6),
@@ -86,17 +86,18 @@ def generar_datos_estudiante():
 
 # Insertar datos de ejemplo en la base de datos
 def insertar_datos_estudiante(coleccion, num_docs):
-    # coleccion.delete_many({})
     datos = []
     for _ in range(num_docs):
         datos.append(generar_datos_estudiante())
     print(datos)
-    # coleccion.insert_many(datos)
+    coleccion.insert_many(datos)
 
 if __name__ == "__main__":
     # Inicializar cliente de MongoDB
     cliente = MongoClient(os.getenv('MONGODB_URI')) 
     db = cliente['testdb']
+    db['estudiante'].delete_many({})
+    db['publicacion'].delete_many({})
     coleccion_estudiante = db['estudiante']
     insertar_datos_estudiante(coleccion_estudiante, 10)
     print("Datos de estudiantes insertados correctamente en la base de datos MongoDB.")
