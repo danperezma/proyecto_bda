@@ -28,7 +28,7 @@ def generar_datos_estudiante():
         "estrato": random.randint(1, 6),
         "localidad": fake.city(),
         "historialAcadémico": [],
-        "educaciónAdicional": [],
+        # "educaciónAdicional": [],
         "proyectoGraduación": {}
     }
 
@@ -76,6 +76,7 @@ def generar_datos_estudiante():
         }
     elif tipo_proyecto == "bapi":
         proyecto_graduación = {
+            "pais": fake.country(),
             "tipo": "bapi",
             "materiasBapi": [random.choice(programa["materias"]) for _ in range(random.randint(1, 3))]
         }
