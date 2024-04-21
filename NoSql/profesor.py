@@ -2,6 +2,7 @@ from faker import Faker
 from pymongo import MongoClient
 from dotenv import load_dotenv
 from const import programas
+from datetime import datetime
 import os
 import random
 
@@ -21,7 +22,7 @@ def generar_datos_profesor():
     profesor = {
         "nombre": fake.name(),
         "email": fake.email(),
-        "fechaNacimiento": fake.date_of_birth(minimum_age=25, maximum_age=65).strftime('%Y-%m-%d'),
+        "fechaNacimiento": datetime.combine(fake.date_of_birth(minimum_age=27, maximum_age=65), datetime.min.time()),
         "género": random.choice(["masculino", "femenino", "prefiere no decir"]),
         "númeroTeléfono": fake.phone_number(),
         "estrato": random.randint(1, 6),
