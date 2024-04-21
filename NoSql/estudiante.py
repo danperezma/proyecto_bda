@@ -32,56 +32,61 @@ def generar_datos_estudiante():
         "proyectoGraduación": {}
     }
 
-    facultad = random.choice(programas["facultades"])
-
-    departamento = random.choice(facultad["departamentos"])
-    
-    programa = random.choice(departamento["carreras"])
-    nombre_programa = programa["nombre"]
 
     # Generar historial académico
     for _ in range(random.choice(([1] * 15) + [2])):
+        facultad = random.choice(programas["facultades"])
+        departamento = random.choice(facultad["departamentos"])
+        programa = random.choice(departamento["carreras"])
+        nombre_programa = programa["nombre"]
+
         registro_académico = {
             "programa": nombre_programa,
-            "promedio": round(random.uniform(3.0, 5.0), 2),
             "idCarrera": programa["id"],
-            "materias": [random.choice(programa["materias"]) for _ in range(random.randint(8, 10))]
+            "materias": []
         }
-        estudiante["historialAcadémico"].append(registro_académico)
+    for materia in programa["materias"]:
+        nota = round(random.uniform(2.7, 5.0), 2)  # Generar nota entre 2.7 y 5.0
+        registro_académico["materias"].append({"nombre": materia, "nota": nota})
+    estudiante["historialAcadémico"].append(registro_académico)
 
+    estudiante["proyectoGraduación"] = []
     # Generar proyecto de graduación
-    tipo_proyecto = random.choice(["publicación", "práctica profesional", "bapi"])
-    proyecto_graduación = {}
-    if tipo_proyecto == "publicación":
+    for i in range(len(estudiante["historialAcadémico"])):
+        tipo_proyecto = random.choice(["publicación", "práctica profesional", "bapi"])
+        if tipo_proyecto == "publicación":
 
-        publicacion = {
-            "id": fake.random_int(min=1, max=1000),
-            "revista": fake.company(),
-            "tema": fake.catch_phrase(),
-            "formato": fake.random_element(elements=("artículo", "libro", "ponencia"))
-        }
-        insertar_publicacion(publicacion)
-        proyecto_graduación = {
-            "tipo": "publicación",
-            "nota": round(random.uniform(3.0, 5.0), 2),
-            "idPublicación": publicacion["id"],
-            "tema": publicacion["tema"],
-        }
-    elif tipo_proyecto == "práctica profesional":
-        proyecto_graduación = {
-            "tipo": "práctica profesional",
-            "organización": fake.company(),
-            "salario": round(random.uniform(100, 1000), 2),
-            "posición": fake.job()
-        }
-    elif tipo_proyecto == "bapi":
-        proyecto_graduación = {
-            "pais": fake.country(),
-            "tipo": "bapi",
-            "materiasBapi": [random.choice(programa["materias"]) for _ in range(random.randint(1, 3))]
-        }
+            publicacion = {
+                "id": fake.random_int(min=1, max=1000),
+                "revista": fake.company(),
+                "tema": fake.catch_phrase(),
+                "formato": fake.random_element(elements=("artículo", "libro", "ponencia"))
+            }
+            insertar_publicacion(publicacion)
+            proyecto_graduación = {
+                "tipo": "publicación",
+                "programa": estudiante["historialAcadémico"][i]["programa"],
+                "nota": round(random.uniform(3.0, 5.0), 2),
+                "idPublicación": publicacion["id"],
+                "tema": publicacion["tema"],
+            }
+        elif tipo_proyecto == "práctica profesional":
+            proyecto_graduación = {
+                "tipo": "práctica profesional",
+                "programa": estudiante["historialAcadémico"][i]["programa"],
+                "organización": fake.company(),
+                "salario": round(random.uniform(100, 1000), 2),
+                "posición": fake.job()
+            }
+        elif tipo_proyecto == "bapi":
+            proyecto_graduación = {
+                "tipo": "bapi",
+                "programa": estudiante["historialAcadémico"][i]["programa"],
+                "pais": fake.country(),
+                "materiasBapi": [ random.choice(estudiante["historialAcadémico"][i]["materias"])["nombre"] for _ in range(random.randint(1, 3))]
+            }
     
-    estudiante["proyectoGraduación"] = proyecto_graduación
+    estudiante["proyectoGraduación"].append(proyecto_graduación)
 
     return estudiante
 
