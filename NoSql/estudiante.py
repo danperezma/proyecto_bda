@@ -42,6 +42,8 @@ def generar_datos_estudiante():
         nombre_programa = programa["nombre"]
 
         registro_académico = {
+            "facultad": facultad["nombre"],
+            "departamento": departamento["nombre"],
             "programa": nombre_programa,
             "fechaGraduacion": estudiante["fechaNacimiento"].replace(year=estudiante["fechaNacimiento"].year + random.randint(20, 35)),
             "idCarrera": programa["id"],
