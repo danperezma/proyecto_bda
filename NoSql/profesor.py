@@ -47,5 +47,5 @@ if __name__ == "__main__":
     db = cliente['testdb']
     coleccion_profesor = db['profesor']
     coleccion_profesor.delete_many({})
-    insertar_datos_profesor(coleccion_profesor, 5)
+    insertar_datos_profesor(coleccion_profesor, 100)
     # print("Datos de profesores insertados correctamente en la base de datos MongoDB.")

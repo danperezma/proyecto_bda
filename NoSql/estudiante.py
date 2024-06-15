@@ -109,5 +109,5 @@ if __name__ == "__main__":
     db['estudiante'].delete_many({})
     db['publicacion'].delete_many({})
     coleccion_estudiante = db['estudiante']
-    insertar_datos_estudiante(coleccion_estudiante, 10)
+    insertar_datos_estudiante(coleccion_estudiante, 100)
     print("Datos de estudiantes insertados correctamente en la base de datos MongoDB.")
