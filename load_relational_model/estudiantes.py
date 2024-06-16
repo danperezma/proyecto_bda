@@ -2,12 +2,12 @@ import os
 import csv
 from datetime import datetime
 from dbConnection import conexion
-from logger import logger
+from logger import log
 
 
 def load_data():
     try:
-        logger.info("Load student data started")
+        log("info", "Load student data started", None)
 
         # Verificar si la conexión fue exitosa
         if conexion.is_connected():
@@ -26,16 +26,17 @@ def load_data():
                 for fila in lector_csv:
                     # Suponiendo que tus columnas en la tabla se llaman igual que las columnas en el CSV
                     datos = (fila['idEstudiante'], fila['nombre'], fila['sexo'], fila['email'], fila['telefono'], datetime.strptime(
-                        fila['fechaNacimiento'], "%m/%d/%Y").strftime("%Y-%m-%d"))  # Ajusta esto según la estructura de tu tabla
+                        # Ajusta esto según la estructura de tu tabla
+                        fila['fechaNacimiento'], "%m/%d/%Y").strftime("%Y-%m-%d"))
                     cursor.execute(consulta, datos)
 
             # Confirmar la transacción
             conexion.commit()
-            logger.info("Datos insertados correctamente.")
+            log("info", "Load student data finished", None)
 
             # Cerrar cursor y conexión
             cursor.close()
         else:
-            logger.error("No se pudo conectar a la base de datos MySQL")
+            log("error", "Failed to connect to the database", None)
     except Exception as e:
-        logger.error(f"Error during student data loading: {e}")
+        log("error", f"Error during student data loading, {e}", str(e))

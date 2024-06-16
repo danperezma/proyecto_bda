@@ -2,12 +2,12 @@ import csv
 from datetime import datetime
 import os
 from dbConnection import conexion
-from logger import logger
+from logger import log
 
 
 def load_data():
     try:
-        logger.info("Starting job data loading process")
+        log("info", "Loading job data started", None)
 
         # Verificar si la conexión fue exitosa
         if conexion.is_connected():
@@ -26,16 +26,18 @@ def load_data():
                 for fila in lector_csv:
                     # Suponiendo que tus columnas en la tabla se llaman igual que las columnas en el CSV
                     datos = (fila['idTrabajo'], fila['idEstudiante'], datetime.strptime(fila['fechaInicio'], "%m/%d/%Y").strftime("%Y-%m-%d"), datetime.strptime(
-                        fila['fechaFin'], "%m/%d/%Y").strftime("%Y-%m-%d"), fila['compania'], fila['pais'], fila['sector'], fila['salario'])  # Ajusta esto según la estructura de tu tabla
+                        # Ajusta esto según la estructura de tu tabla
+                        fila['fechaFin'], "%m/%d/%Y").strftime("%Y-%m-%d"), fila['compania'], fila['pais'], fila['sector'], fila['salario'])
                     cursor.execute(consulta, datos)
 
             # Confirmar la transacción
             conexion.commit()
-            logger.info("Datos insertados correctamente.")
+
+            log("info", "Loading job data finished", None)
 
             # Cerrar cursor y conexión
             cursor.close()
         else:
-            logger.error("No se pudo conectar a la base de datos MySQL")
+            log("error", "Failed to connect to the database", None)
     except Exception as e:
-        logger.error(f"Error during job data loading: {e}")
+        log("error", f"Error during job data loading {e}", str(e))

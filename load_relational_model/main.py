@@ -5,10 +5,13 @@ import programas_estudiante
 import pasantia
 import tesis
 import trabajo
+import dotenv
+from logger import log
 from dbConnection import conexion
 
-clear = False
+dotenv.load_dotenv()
 
+clear = False
 
 if not clear:
     programas.load_data()
@@ -20,24 +23,23 @@ if not clear:
     bapi.load_data()
 
 else:
-    def delete_all_data():
-        try:
-            cursor = conexion.cursor()
+    log("warning", "Clearing all data from all tables", None)
+    try:
+        cursor = conexion.cursor()
 
-            # List of tables from which you want to delete data
-            tables = ["bapi", "estudiante", "pasantia", "programa",
-                      "programa_estudiante", "tesis", "trabajo"]
+        # List of tables from which you want to delete data
+        tables = ["trabajo", "bapi", "programa_estudiante",
+                  "pasantia", "tesis", "estudiante", "programa"]
 
-            for table in tables:
-                delete_query = f"DELETE FROM {table}"
-                cursor.execute(delete_query)
-                print(f"All data deleted from table {table}")
+        for table in tables:
+            delete_query = f"DELETE FROM {table}"
+            cursor.execute(delete_query)
+            log("info", f"All data deleted from table {table}", None)
 
-            conexion.commit()
-            print("All data deleted successfully.")
-        except Exception as e:
-            print(f"Error during data deletion: {e}")
-        finally:
-            cursor.close()
+        conexion.commit()
+        log("info", "All data deleted from all tables", None)
 
-    delete_all_data()
+    except Exception as e:
+        log("error", f"Failed to delete all data {e}", str(e))
+    finally:
+        cursor.close()

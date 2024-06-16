@@ -2,6 +2,11 @@ import logging
 import json
 import requests
 import os
+import dotenv
+import datetime
+from pytz import timezone
+
+dotenv.load_dotenv()
 
 shouldLogToKibana = os.getenv("LOG_TO_KIBANA", "false") == "true"
 
@@ -30,6 +35,8 @@ def setup_logger():
 
 # Call setup_logger() to configure the logger immediately when this module is imported
 logger = setup_logger()
+logger.info(f"Loggin to kibana {shouldLogToKibana} : {
+            os.getenv('LOG_TO_KIBANA')}")
 
 logFunctionsByLevel = {
     "info": logger.info,
@@ -77,17 +84,19 @@ def log(level: str, event: str, details):
     if logFunction is None:
         return
 
-    details = try_convert_to_str_dict(details)
+    # details = try_convert_to_str_dict(details)
+
+    details = dict()
 
     details["event"] = event
     details["level"] = level
 
-    details = json.dumps(details)
+    # details = json.dumps(details)
 
     try:
         if shouldLogToKibana:
             indexKibana("etl-logs", details)
-
+            logger.info("Log indexed in Kibana")
         logFunction(event)
 
     except Exception as e:
@@ -96,7 +105,6 @@ def log(level: str, event: str, details):
 
 
 def indexKibana(index, object, retries=3):
-    logger.info(os.getenv("ELASTIC_INGEST_URL"))
     elasticIngestURL = os.getenv("ELASTIC_INGEST_URL") + "/" + index + "/_doc"
 
     headers = {
@@ -106,8 +114,13 @@ def indexKibana(index, object, retries=3):
     username = os.getenv("ELASTIC_USERNAME")
     password = os.getenv("ELASTIC_PASSWORD")
 
+    # Replace with your city's time zone if needed
+    local_timezone = timezone('America/Bogota')
+    timestamp = datetime.datetime.now(local_timezone).isoformat()
+    object["timestamp"] = timestamp
+
     response = requests.request(
-        "POST", elasticIngestURL, headers=headers, data=object, auth=(username, password))
+        "POST", elasticIngestURL, headers=headers, data=json.dumps(object), auth=(username, password))
 
     if response.status_code != 201:
         logger.debug(f"Unexpected response:\n status code {

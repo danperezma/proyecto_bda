@@ -1,9 +1,11 @@
 import os
 import mysql.connector
-from dotenv import load_dotenv
+import dotenv
 from logger import logger
+from logger import log
 
-load_dotenv()
+
+dotenv.load_dotenv()
 
 
 def createConexion():
@@ -13,19 +15,19 @@ def createConexion():
         db_password = os.getenv("DB_PASSWORD")
         db_database = os.getenv("DB_DATABASE")
 
-        conexion = mysql.connector.connect(
+        connection = mysql.connector.connect(
             host=db_host,
             user=db_user,
             password=db_password,
             database=db_database
         )
 
-        logger.info("Connected to the database")
-        return conexion
+        log("info", "Connected to the database", connection)
+        return connection
 
     except mysql.connector.Error as err:
         # Log connection error
-        logger.error(f"Failed to connect to the database: {err}")
+        log("error", "Failed to connect to the database", str(err))
         return None
 
 

@@ -1,12 +1,12 @@
 import csv
 import os
 from dbConnection import conexion
-from logger import logger
+from logger import log
 
 
 def load_data():
     try:
-        logger.info("Load programas data started")
+        log("info", "Load program data started", None)
 
         # Verificar si la conexión fue exitosa
         if conexion.is_connected():
@@ -24,16 +24,18 @@ def load_data():
                 for fila in lector_csv:
                     # Suponiendo que tus columnas en la tabla se llaman igual que las columnas en el CSV
                     datos = (fila['idPrograma'], fila['nombre'], fila['nivel'], fila['departamento'],
-                             fila['facultad'], fila['sede'])  # Ajusta esto según la estructura de tu tabla
+                             # Ajusta esto según la estructura de tu tabla
+                             fila['facultad'], fila['sede'])
                     cursor.execute(consulta, datos)
 
             # Confirmar la transacción
             conexion.commit()
-            logger.info("Datos insertados correctamente.")
+
+            log("info", "Load program data finished", None)
 
             # Cerrar cursor y conexión
             cursor.close()
         else:
-            logger.error("No se pudo conectar a la base de datos MySQL")
+            log("error", "Failed to connect to the database", None)
     except Exception as e:
-        logger.error(f"Error during program data loading: {e}")
+        log("error", f"Error during program data loading {e}", str(e))

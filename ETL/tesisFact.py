@@ -63,7 +63,7 @@ def process_data_and_save():
 
             tesis = {
                 "idEstudiante": idEstudiante,
-                "idPrograma": idPrograma,
+                "idPrograma": idPrograma,idEstudiante
                 "nombreDirector": nombreDirector,
                 "nombre": nombre,
                 "fechaPublicacion": fechaPublicacion,
