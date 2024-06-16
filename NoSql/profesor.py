@@ -12,6 +12,8 @@ load_dotenv()
 fake = Faker()
 
 # Generar datos para profesores
+
+
 def generar_datos_profesor():
     facultad = random.choice(programas["facultades"])
     nombre_facultad = facultad["nombre"]
@@ -65,10 +67,11 @@ if __name__ == "__main__":
     # Eliminar datos existentes en la colección
     log("info", "Eliminando datos existentes en la colección 'profesor'")
     coleccion_profesor.delete_many({})
+
     log("info", "Eliminación de datos completada")
 
     # Insertar datos de ejemplo
-    insertar_datos_profesor(coleccion_profesor, 5)
+    insertar_datos_profesor(coleccion_profesor, 100)
 
     # Cerrar conexión a MongoDB
     log("info", "Cerrando conexión a MongoDB")

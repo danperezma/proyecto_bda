@@ -135,7 +135,7 @@ if __name__ == "__main__":
         db['estudiante'].delete_many({})
         db['publicacion'].delete_many({})
         coleccion_estudiante = db['estudiante']
-        insertar_datos_estudiante(coleccion_estudiante, 10)
+        insertar_datos_estudiante(coleccion_estudiante, 100)
         log("info", "Student data inserted successfully into MongoDB")
     except Exception as error:
         log("error", f"Error during MongoDB operations: {error}")
