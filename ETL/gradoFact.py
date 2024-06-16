@@ -1,5 +1,5 @@
 from datetime import datetime
-from logger import logger
+from logger import log
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
@@ -9,7 +9,7 @@ def months_difference(start_date, end_date):
 
 def process_data_and_save():
     try:
-        logger.info("Processing GRADO_FACT")
+        log("info", "Processing GRADO_FACT")
         cursor = conexion.cursor()
 
         select_query = "SELECT idEstudiante, idPrograma, fechaInicio, fechaFin, modalidadGrado FROM programa_estudiante"
@@ -73,7 +73,7 @@ def process_data_and_save():
 
             tiempo_id = insertData(conexion, "TIEMPO_DIM", tiempo)
 
-            logger.debug(f"try to create map")
+            log("debug", "try to create map fact")
 
             # Insert fact data
             fact = {
@@ -83,16 +83,16 @@ def process_data_and_save():
                 "modalidadGrado": modalidad,
             }
 
-            logger.debug(f"Map created: {fact}")
+            log("debug", f"Map created: {fact}")
 
             insertData(conexion, "GRADO_FACT", fact)
 
         conexion.commit()
-        logger.info("Data processing finished")
+        log("info", "Data processing finished")
     except Exception as error:
-        logger.error(f"Error during data processing: {error}, {fact}")
+        log("error", f"Error during data processing: {error}")
     finally:
-        logger.info("Data processing finished")
+        log("info", "Data processing finished")
         cursor.close()
 
 

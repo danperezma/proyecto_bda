@@ -79,7 +79,7 @@ def try_convert_to_str_dict(obj):
             return {}
 
 
-def log(level: str, event: str, details):
+def log(level: str, event: str, details=None):
     logFunction = logFunctionsByLevel.get(level, None)
     if logFunction is None:
         return
@@ -95,7 +95,7 @@ def log(level: str, event: str, details):
 
     try:
         if shouldLogToKibana:
-            indexKibana("no-sql-logs", details)
+            indexKibana("etl-logs", details)
             logger.info("Log indexed in Kibana")
         logFunction(event)
 

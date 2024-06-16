@@ -1,7 +1,7 @@
 import os
 import mysql.connector
 from dotenv import load_dotenv
-from logger import logger
+from logger import log
 
 load_dotenv()
 
@@ -20,12 +20,12 @@ def createConexion():
             database=db_database
         )
 
-        logger.info("Connected to the database")
+        log("info", "Connected to the database", None)
         return conexion
 
     except mysql.connector.Error as err:
         # Log connection error
-        logger.error(f"Failed to connect to the database: {err}")
+        log("error", f"Failed to connect to the database {err}")
         return None
 
 
@@ -50,12 +50,11 @@ def insertData(con, table, data_dict):
 
         con.commit()  # Commit the transaction
 
-        logger.debug(f"Data inserted into {table} successfully")
+        log("info", f"Data inserted into {table} successfully")
+
         return cursor.lastrowid
     except mysql.connector.Error as error:
-        print(f"Error inserting data: {error}")
-        logger.error(
-            f"Error inserting data into {table}. Error was {error}")
+        log("error", f"Error inserting data into {table}. Error was {error}")
         con.rollback()  # Rollback changes if an error occurs
     finally:
         cursor.close()
@@ -65,7 +64,7 @@ def insertIfNotExists(con, table, id_column, id_value, data_dict):
     if data_dict is None or len(data_dict) == 0:
         return
 
-    logger.debug(f"Inserting data into {table}. {id_column}: {id_value}")
+    log("info", f"Inserting data into {table}. {id_column}: {id_value}")
 
     cursor = con.cursor()
 
@@ -80,18 +79,18 @@ def insertIfNotExists(con, table, id_column, id_value, data_dict):
             values = ', '.join(['%s'] * len(data_dict))
 
             # Insert data into the table using parameterized query
-            insert_query = f"INSERT INTO {table} ({id_column}, {columns}) VALUES (%s, {values})"
+            insert_query = f"INSERT INTO {
+                table} ({id_column}, {columns}) VALUES (%s, {values})"
             cursor.execute(insert_query, (id_value, *data_dict.values()))
 
             con.commit()  # Commit the transaction
 
     except mysql.connector.Error as error:
-        logger.error(
-            f"Error inserting data into {table}. {id_column}: {id_value}. Error was {error}")
+        log("error", f"Error inserting data into {table}. Error was {error}")
         con.rollback()  # Rollback changes if an error occurs
     finally:
-        logger.debug(
-              f"Data inserted into {table} successfully. {id_column}: {id_value }")
+        log("info",
+            f"Data inserted into {table} successfully. {id_column}: {id_value}")
         cursor.close()
 
 

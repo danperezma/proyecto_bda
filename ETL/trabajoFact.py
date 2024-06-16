@@ -1,5 +1,5 @@
 from datetime import datetime
-from logger import logger
+from logger import log
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
@@ -57,7 +57,7 @@ def createTimeData(fechaInicio, fechaFin):
 
 def process_data_and_save():
     try:
-        logger.info("Processing TRABAJO_FACT")
+        log("info", "Processing TRABAJO_FACT")
         cursor = conexion.cursor()
 
         select_query = "SELECT * FROM trabajo"
@@ -69,7 +69,8 @@ def process_data_and_save():
 
             idTrabajo, idEstudiante, fechaInicio, fechaFin, compania, pais, sector, salario = row
 
-            studentProgramQuery = f"SELECT idPrograma FROM programa_estudiante WHERE idEstudiante = {idEstudiante}"
+            studentProgramQuery = f"SELECT idPrograma FROM programa_estudiante WHERE idEstudiante = {
+                idEstudiante}"
             cursor.execute(studentProgramQuery)
 
             programIds = []
@@ -105,9 +106,9 @@ def process_data_and_save():
                 }
                 insertData(conexion, "TRABAJO_FACT", trabajo)
 
-        logger.info("Data processed and saved successfully")
+        log("info", "Data processed and saved successfully")
     except Exception as e:
-        logger.error(f"Error in processing TRABAJO_FACT: {e}")
+        log("error", f"Error in processing TRABAJO_FACT: {e}")
 
 
 process_data_and_save()

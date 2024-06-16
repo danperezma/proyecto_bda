@@ -1,5 +1,5 @@
 from datetime import datetime
-from logger import logger
+from logger import log
 from dbUtils import conexion, insertIfNotExists, insertData
 
 
@@ -42,7 +42,7 @@ def createProgramData(idPrograma, cursor):
 
 def process_data_and_save():
     try:
-        logger.info("Processing TESIS_FACT")
+        log("info", "Processing TESIS_FACT")
 
         cursor = conexion.cursor()
 
@@ -63,7 +63,7 @@ def process_data_and_save():
 
             tesis = {
                 "idEstudiante": idEstudiante,
-                "idPrograma": idPrograma,idEstudiante
+                "idPrograma": idPrograma,
                 "nombreDirector": nombreDirector,
                 "nombre": nombre,
                 "fechaPublicacion": fechaPublicacion,
@@ -73,9 +73,9 @@ def process_data_and_save():
             insertData(conexion, "TESIS_FACT", tesis)
 
         conexion.commit()
-        logger.info("Data processed and saved successfully")
+        log("info", "Data processed and saved successfully")
     except Exception as e:
-        logger.error(f"Error in processing TESIS_FACT: {e}")
+        log("error", f"Error in processing TESIS_FACT: {e}")
 
 
 process_data_and_save()
