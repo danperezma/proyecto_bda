@@ -6,20 +6,29 @@ from datetime import datetime
 from const import programas
 import os
 import random
+from logger import log
 
 load_dotenv()
 
 fake = Faker()
 
+
 def insertar_publicacion(publicacion):
-    cliente = MongoClient(os.getenv('MONGODB_URI'))
-    db = cliente['testdb']
-    coleccion_publicacion = db['publicacion']
-    coleccion_publicacion.insert_one(publicacion)
-    # print(publicacion)
+    log("info", f"Inserting publication: {publicacion}")
+    try:
+        cliente = MongoClient(os.getenv('MONGODB_URI'))
+        db = cliente['testdb']
+        coleccion_publicacion = db['publicacion']
+        coleccion_publicacion.insert_one(publicacion)
+        log("info", f"Publication inserted successfully: {publicacion}")
+    except Exception as error:
+        log("error", f"Error during publication insertion: {error}")
 
 # Generar datos para estudiantes
+
+
 def generar_datos_estudiante():
+    log("info", "Generating student data")
     estudiante = {
         "nombre": fake.name(),
         "email": fake.email(),
@@ -29,10 +38,10 @@ def generar_datos_estudiante():
         "estrato": random.randint(1, 6),
         "localidad": fake.city(),
         "historialAcadémico": [],
-        # "educaciónAdicional": [],
         "proyectoGraduación": {}
     }
 
+    log("debug", f"Initial student data: {estudiante}")
 
     # Generar historial académico
     for _ in range(random.choice(([1] * 15) + [2])):
@@ -49,17 +58,24 @@ def generar_datos_estudiante():
             "idCarrera": programa["id"],
             "materias": []
         }
-    for materia in programa["materias"]:
-        nota = round(random.uniform(2.7, 5.0), 2)  # Generar nota entre 2.7 y 5.0
-        registro_académico["materias"].append({"nombre": materia, "nota": nota})
-    estudiante["historialAcadémico"].append(registro_académico)
+
+        for materia in programa["materias"]:
+            # Generar nota entre 2.7 y 5.0
+            nota = round(random.uniform(2.7, 5.0), 2)
+            registro_académico["materias"].append(
+                {"nombre": materia, "nota": nota})
+
+        estudiante["historialAcadémico"].append(registro_académico)
+
+    log("debug", f"Student academic history: {
+        estudiante['historialAcadémico']}")
 
     estudiante["proyectoGraduación"] = []
     # Generar proyecto de graduación
     for i in range(len(estudiante["historialAcadémico"])):
-        tipo_proyecto = random.choice(["publicación", "práctica profesional", "bapi"])
+        tipo_proyecto = random.choice(
+            ["publicación", "práctica profesional", "bapi"])
         if tipo_proyecto == "publicación":
-
             publicacion = {
                 "id": fake.random_int(min=1, max=1000),
                 "revista": fake.company(),
@@ -87,27 +103,39 @@ def generar_datos_estudiante():
                 "tipo": "bapi",
                 "programa": estudiante["historialAcadémico"][i]["programa"],
                 "pais": fake.country(),
-                "materiasBapi": [ random.choice(estudiante["historialAcadémico"][i]["materias"])["nombre"] for _ in range(random.randint(1, 3))]
+                "materiasBapi": [random.choice(estudiante["historialAcadémico"][i]["materias"])["nombre"] for _ in range(random.randint(1, 3))]
             }
-    
-    estudiante["proyectoGraduación"].append(proyecto_graduación)
 
+        estudiante["proyectoGraduación"].append(proyecto_graduación)
+
+    log("debug", f"Student graduation project: {
+        estudiante['proyectoGraduación']}")
     return estudiante
 
 # Insertar datos de ejemplo en la base de datos
+
+
 def insertar_datos_estudiante(coleccion, num_docs):
+    log("info", f"Inserting {num_docs} student records into the database")
     datos = []
     for _ in range(num_docs):
         datos.append(generar_datos_estudiante())
-    print(datos)
-    coleccion.insert_many(datos)
+    try:
+        coleccion.insert_many(datos)
+        log("info", "Student data inserted successfully")
+    except Exception as error:
+        log("error", f"Error during student data insertion: {error}")
+
 
 if __name__ == "__main__":
-    # Inicializar cliente de MongoDB
-    cliente = MongoClient(os.getenv('MONGODB_URI')) 
-    db = cliente['testdb']
-    db['estudiante'].delete_many({})
-    db['publicacion'].delete_many({})
-    coleccion_estudiante = db['estudiante']
-    insertar_datos_estudiante(coleccion_estudiante, 10)
-    print("Datos de estudiantes insertados correctamente en la base de datos MongoDB.")
+    log("info", "Initializing MongoDB client")
+    try:
+        cliente = MongoClient(os.getenv('MONGODB_URI'))
+        db = cliente['testdb']
+        db['estudiante'].delete_many({})
+        db['publicacion'].delete_many({})
+        coleccion_estudiante = db['estudiante']
+        insertar_datos_estudiante(coleccion_estudiante, 10)
+        log("info", "Student data inserted successfully into MongoDB")
+    except Exception as error:
+        log("error", f"Error during MongoDB operations: {error}")
