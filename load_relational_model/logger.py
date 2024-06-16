@@ -95,7 +95,7 @@ def log(level: str, event: str, details):
 
     try:
         if shouldLogToKibana:
-            indexKibana("etl-logs", details)
+            indexKibana("relational-logs", details)
             logger.info("Log indexed in Kibana")
         logFunction(event)
 
